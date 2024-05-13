@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Note saver</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <button id="toggle-mode-button" type="button" title><i class="fa-solid fa-sun"></i></button>
+  <h2>New Note</h2>
+  <form id="noteForm">
+    <div>
+        <input type="text" id="note" name="note">
+    </div>
+    <button type="submit" title class="text-button">Save Note</button>
+  </form>
+  <button type="button" id="clearButton" title class="text-button">Clear all</button>
+  
+  <h2>Saved Notes:</h2>
+  <ul id="savedNotes"></ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>

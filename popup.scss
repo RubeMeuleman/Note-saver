@@ -1,0 +1,72 @@
+// Imports
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
+
+// Variables
+:root {
+    --primary-color: black;
+    --background-color: white;
+    --accent-color: #73009f;
+
+    .dark-mode {
+        --primary-color: white;
+        --background-color: black;
+        --accent-color: #be49ec;
+    }
+}
+
+
+// Code
+html {
+    text-align: center;
+    transition: .3s;
+
+    *::selection {
+        color: white;
+        background-color: var(--accent-color);
+    }
+
+    body {
+        font-family: "NTR", sans-serif;
+        background-color: var(--background-color);
+        color: var(--primary-color);
+
+        #toggle-mode-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: var(--primary-color);
+        }
+
+        
+        h2 {
+            margin-bottom: 0;
+        }
+
+        #note {
+            margin: 0 10px 20px;
+        }
+
+        
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+
+            &.text-button:hover, &.text-button:focus {
+                color: var(--accent-color);
+            }
+        }
+
+        ul {
+            padding: 0;
+
+            .saved-note {
+                list-style: none;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
