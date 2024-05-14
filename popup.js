@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
   toggleButton.addEventListener('click', function() {
     toggleMode(toggleButton);
   });
+
+  if (localStorage.getItem('colorModeNoteSaver') === 'dark') toggleMode(toggleButton, false);
 });
 
 // Function to clear all notes
@@ -54,8 +56,9 @@ function clearNotes() {
   savedNotesDiv.innerHTML = ''; // Clear displayed notes
 }
 
-function toggleMode(activatedButton) {
+function toggleMode(activatedButton, changeSavedState = true) {
   activatedButton.querySelector('i').classList.toggle('fa-moon');
   activatedButton.querySelector('i').classList.toggle('fa-sun');
   document.querySelector('body').classList.toggle('dark-mode');
+  if (changeSavedState) localStorage.setItem('colorModeNoteSaver', localStorage.getItem('colorModeNoteSaver') === 'dark' ? 'light' : 'dark');
 }
