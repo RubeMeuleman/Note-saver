@@ -31,6 +31,7 @@ html {
         font-family: "NTR", sans-serif;
         background-color: var(--background-color);
         color: var(--primary-color);
+        margin: 0;
 
         #toggle-mode-button {
             position: absolute;
@@ -38,7 +39,6 @@ html {
             right: 10px;
             color: var(--primary-color);
         }
-
         
         h2 {
             margin-bottom: 0;
@@ -46,8 +46,11 @@ html {
 
         #note {
             margin: 0 10px 20px;
+            outline: 0;
+            border: 2px solid var(--primary-color);
+            background-color: var(--background-color);
+            color: var(--primary-color);
         }
-
         
         button {
             background: none;
@@ -61,11 +64,12 @@ html {
         }
 
         ul {
+            margin: 0;
             padding: 0;
 
             .saved-note {
+                font-size: 18px;
                 list-style: none;
-                margin-bottom: 5px;
             }
         }
     }

@@ -23,6 +23,7 @@ html body {
   font-family: "NTR", sans-serif;
   background-color: var(--background-color);
   color: var(--primary-color);
+  margin: 0;
 }
 html body #toggle-mode-button {
   position: absolute;
@@ -35,6 +36,10 @@ html body h2 {
 }
 html body #note {
   margin: 0 10px 20px;
+  outline: 0;
+  border: 2px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--primary-color);
 }
 html body button {
   background: none;
@@ -46,11 +51,12 @@ html body button.text-button:hover, html body button.text-button:focus {
   color: var(--accent-color);
 }
 html body ul {
+  margin: 0;
   padding: 0;
 }
 html body ul .saved-note {
+  font-size: 18px;
   list-style: none;
-  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=popup.css.map */
